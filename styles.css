@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+#stopwatch {
+    text-align: center;
+}
+
+#time {
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ccc;
+}
