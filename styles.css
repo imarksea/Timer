@@ -17,6 +17,12 @@ body {
     font-weight: bold;
 }
 
+#liveTime {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: white;
+}
+
 button {
     margin-top: 20px;
     font-size: 1.5rem;
