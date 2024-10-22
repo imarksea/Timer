@@ -3,6 +3,8 @@ let startTime, updatedTime, difference, tInterval, running = false;
 const timeDisplay = document.getElementById('time');
 const startStopBtn = document.getElementById('startStopBtn');
 const resetBtn = document.getElementById('resetBtn');
+const liveTimeDisplay = document.getElementById('liveTime');
+const showTimeBtn = document.getElementById('showTimeBtn');
 
 function startStop() {
     if (!running) {
@@ -35,5 +37,16 @@ function reset() {
     startStopBtn.innerHTML = 'Start';
 }
 
+function showLiveTime() {
+    setInterval(() => {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        liveTimeDisplay.innerHTML = `Current Time: ${hours}:${minutes}:${seconds}`;
+    }, 1000);
+}
+
 startStopBtn.addEventListener('click', startStop);
 resetBtn.addEventListener('click', reset);
+showTimeBtn.addEventListener('click', showLiveTime);
