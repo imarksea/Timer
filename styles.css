@@ -8,13 +8,16 @@ body {
 }
 
 #stopwatch, #timePage {
+    width: 80vw;
+    height: 80vh;
     text-align: center;
     font-family: "Noto Sans KR", sans-serif;
     font-style: normal;
 }
 
 #time {
-    font-size: 25rem;
+    font-size: 10vw;
+    max-width: 80vw;
     color: white;
     font-weight: bold;
     font-family: "Noto Sans KR", sans-serif;
@@ -23,7 +26,9 @@ body {
 
 #liveTime {
     color: white;
-    font-size: 25rem;
+    height: auto;
+    font-size: 10vw;
+    max-width: 80vw;
     font-weight: bold;
     font-family: "Noto Sans KR", sans-serif;
     font-style: normal;
@@ -38,7 +43,7 @@ button {
     font-family: "Noto Sans KR", sans-serif;
     font-style: normal;
     margin-top: 20px;
-    font-size: 1.5rem;
+    font-size: 2vw;
     padding: 10px 20px;
     border-radius: 0.75rem;
     background-color: #000;
