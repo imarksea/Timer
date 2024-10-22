@@ -7,7 +7,7 @@ body {
     background-color: #000;
 }
 
-#stopwatch {
+#stopwatch, #timePage {
     text-align: center;
 }
 
