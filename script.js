@@ -10,7 +10,7 @@ function renderStopwatch() {
             <div id="time">00:00:00</div>
             <button id="startStopBtn">Start</button>
             <button id="resetBtn">Reset</button>
-            <a href="#/time"><button id="timePageBtn">Show Live Time</button></a>
+            <a href="#/time"><button id="timePageBtn">Time</button></a>
         </div>
     `;
     
@@ -28,7 +28,7 @@ function renderTimePage() {
     app.innerHTML = `
         <div id="timePage">
             <h1 style="color: white;">Live Time</h1>
-            <div id="liveTime">--:--:--</div>
+            <div id="liveTime">00:00:00</div>
             <a href="#/"><button>Go Back</button></a>
         </div>
     `;
