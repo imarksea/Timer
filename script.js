@@ -8,9 +8,11 @@ function renderStopwatch() {
     app.innerHTML = `
         <div id="stopwatch">
             <div id="time">00:00:00</div>
-            <button id="startStopBtn">Start</button>
-            <button id="resetBtn">Reset</button>
-            <a href="#/time"><button id="timePageBtn">Time</button></a>
+            <div id="timebtn">
+                <button id="startStopBtn">Start</button>
+                <button id="resetBtn">Reset</button>
+                <a href="#/time"><button id="timePageBtn">Time</button></a>
+            </div>
         </div>
     `;
     
