@@ -9,12 +9,16 @@ body {
 
 #stopwatch, #timePage {
     text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
 }
 
 #time {
     font-size: 5rem;
     color: white;
     font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
 }
 
 #liveTime {
@@ -22,6 +26,8 @@ body {
     color: white;
     font-size: 5rem;
     font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
 }
 
 button {
