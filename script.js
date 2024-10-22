@@ -1,4 +1,5 @@
 let startTime, updatedTime, difference, tInterval, running = false;
+let timeDisplay, startStopBtn, resetBtn;
 
 const app = document.getElementById('app');
 
@@ -13,9 +14,10 @@ function renderStopwatch() {
         </div>
     `;
     
-    const timeDisplay = document.getElementById('time');
-    const startStopBtn = document.getElementById('startStopBtn');
-    const resetBtn = document.getElementById('resetBtn');
+    // Now select the elements and attach event listeners after rendering the HTML
+    timeDisplay = document.getElementById('time');
+    startStopBtn = document.getElementById('startStopBtn');
+    resetBtn = document.getElementById('resetBtn');
     
     startStopBtn.addEventListener('click', startStop);
     resetBtn.addEventListener('click', reset);
