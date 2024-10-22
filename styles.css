@@ -14,7 +14,7 @@ body {
 }
 
 #time {
-    font-size: 50rem;
+    font-size: 25rem;
     color: white;
     font-weight: bold;
     font-family: "Noto Sans KR", sans-serif;
@@ -23,7 +23,7 @@ body {
 
 #liveTime {
     color: white;
-    font-size: 50rem;
+    font-size: 25rem;
     font-weight: bold;
     font-family: "Noto Sans KR", sans-serif;
     font-style: normal;
@@ -41,6 +41,7 @@ button {
     font-size: 1.5rem;
     padding: 10px 20px;
     border-radius: 0.75rem;
+    background-color: #000;
     color: #000;
     border: none;
     cursor: pointer;
