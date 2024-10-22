@@ -19,8 +19,9 @@ body {
 
 #liveTime {
     margin-top: 20px;
-    font-size: 2rem;
     color: white;
+    font-size: 5rem;
+    font-weight: bold;
 }
 
 button {
