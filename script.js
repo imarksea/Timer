@@ -27,7 +27,6 @@ function renderStopwatch() {
 function renderTimePage() {
     app.innerHTML = `
         <div id="timePage">
-            <h1 style="color: white;">Live Time</h1>
             <div id="liveTime">00:00:00</div>
             <a href="#/"><button>Go Back</button></a>
         </div>
