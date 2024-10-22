@@ -1,11 +1,49 @@
 let startTime, updatedTime, difference, tInterval, running = false;
 
-const timeDisplay = document.getElementById('time');
-const startStopBtn = document.getElementById('startStopBtn');
-const resetBtn = document.getElementById('resetBtn');
-const liveTimeDisplay = document.getElementById('liveTime');
-const showTimeBtn = document.getElementById('showTimeBtn');
+const app = document.getElementById('app');
 
+// Function to render the stopwatch page
+function renderStopwatch() {
+    app.innerHTML = `
+        <div id="stopwatch">
+            <div id="time">00:00:00</div>
+            <button id="startStopBtn">Start</button>
+            <button id="resetBtn">Reset</button>
+            <a href="#/time"><button id="timePageBtn">Show Live Time</button></a>
+        </div>
+    `;
+    
+    const timeDisplay = document.getElementById('time');
+    const startStopBtn = document.getElementById('startStopBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    
+    startStopBtn.addEventListener('click', startStop);
+    resetBtn.addEventListener('click', reset);
+}
+
+// Function to render the live time page
+function renderTimePage() {
+    app.innerHTML = `
+        <div id="timePage">
+            <h1 style="color: white;">Live Time</h1>
+            <div id="liveTime">--:--:--</div>
+            <a href="#/"><button>Go Back</button></a>
+        </div>
+    `;
+    
+    const liveTimeDisplay = document.getElementById('liveTime');
+    
+    // Update the live time every second
+    setInterval(() => {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        liveTimeDisplay.innerHTML = `${hours}:${minutes}:${seconds}`;
+    }, 1000);
+}
+
+// Start/Stop function for the stopwatch
 function startStop() {
     if (!running) {
         startTime = new Date().getTime();
@@ -19,6 +57,7 @@ function startStop() {
     }
 }
 
+// Update function for the stopwatch
 function updateTime() {
     updatedTime = new Date().getTime();
     difference = updatedTime - startTime;
@@ -30,6 +69,7 @@ function updateTime() {
     timeDisplay.innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
 
+// Reset function for the stopwatch
 function reset() {
     clearInterval(tInterval);
     running = false;
@@ -37,16 +77,17 @@ function reset() {
     startStopBtn.innerHTML = 'Start';
 }
 
-function showLiveTime() {
-    setInterval(() => {
-        const now = new Date();
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
-        liveTimeDisplay.innerHTML = `Current Time: ${hours}:${minutes}:${seconds}`;
-    }, 1000);
+// Simple client-side routing based on hash changes
+function handleRouting() {
+    const hash = window.location.hash;
+    
+    if (hash === '#/time') {
+        renderTimePage();
+    } else {
+        renderStopwatch();
+    }
 }
 
-startStopBtn.addEventListener('click', startStop);
-resetBtn.addEventListener('click', reset);
-showTimeBtn.addEventListener('click', showLiveTime);
+// Initial load and hash change listener
+window.addEventListener('hashchange', handleRouting);
+window.addEventListener('load', handleRouting);
