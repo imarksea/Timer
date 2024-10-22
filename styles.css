@@ -10,36 +10,43 @@ body {
 #stopwatch, #timePage {
     text-align: center;
     font-family: "Noto Sans KR", sans-serif;
-  font-style: normal;
+    font-style: normal;
 }
 
 #time {
-    font-size: 5rem;
+    font-size: 50rem;
     color: white;
     font-weight: bold;
     font-family: "Noto Sans KR", sans-serif;
-  font-style: normal;
+    font-style: normal;
 }
 
 #liveTime {
-    margin-top: 20px;
     color: white;
-    font-size: 5rem;
+    font-size: 50rem;
     font-weight: bold;
     font-family: "Noto Sans KR", sans-serif;
-  font-style: normal;
+    font-style: normal;
+}
+
+#timebtn {
+    display: inline-flex;   
+    gap: 10px;
 }
 
 button {
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
     margin-top: 20px;
     font-size: 1.5rem;
     padding: 10px 20px;
-    background-color: #fff;
+    border-radius: 0.75rem;
+    color: #000;
     border: none;
     cursor: pointer;
     font-weight: bold;
 }
 
 button:hover {
-    background-color: #ccc;
+    background-color: #fff;
 }
